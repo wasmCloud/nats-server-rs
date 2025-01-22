@@ -1,0 +1,10 @@
+[package]
+name = "nats-server"
+version = "0.1.0"
+edition = "2021"
+
+[[example]]
+name = "simple"
+crate-type = ["bin"]
+
+[dependencies]
