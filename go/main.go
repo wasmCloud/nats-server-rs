@@ -28,8 +28,9 @@ func StartNats() {
 	fs := flag.NewFlagSet(exe, flag.ExitOnError)
 	fs.Usage = usage
 
+	var args []string = []string{"-js"}
 	// Configure the options from the flags/config file
-	opts, err := server.ConfigureOptions(fs, os.Args[1:],
+	opts, err := server.ConfigureOptions(fs, args,
 		server.PrintServerAndExit,
 		fs.Usage,
 		server.PrintTLSHelpAndDie)
